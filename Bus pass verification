@@ -1,0 +1,24 @@
+# College Bus Pass Verification System
+
+valid_passes = {
+    "ECE101": "Kavya",
+    "CSE102": "Priya",
+    "EEE103": "Karthik",
+    "ME104": "Sai"
+}
+
+while True:
+    print("\n===== College Bus Pass Checker =====")
+    student_id = input("Enter Student ID (or 'exit' to quit): ").upper()
+
+    if student_id == "EXIT":
+        print("Thank You!")
+        break
+
+    if student_id in valid_passes:
+        print("✅ Bus Pass Verified")
+        print("Student:", valid_passes[student_id])
+        print("Status : Allowed to Board")
+    else:
+        print("❌ Invalid Bus Pass")
+        print("Status : Access Denied")
